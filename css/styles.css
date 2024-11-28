@@ -26,7 +26,9 @@ nav {
     height: 12vh;
     display: flex;
     justify-content: space-between;
+    padding: 15px 0;
 }
+
 ul {
     list-style-type: none;
     display: flex;
@@ -35,10 +37,18 @@ ul {
 ul a {
     text-decoration: none;
     display: inline-block;
-    padding: 20px; 
+    padding: 12px 20px; 
     font-size: 1.3rem;
     font-family: system-ui;
     color: black;
+}
+.btn__call {
+    background-color: #1C448E;
+    color: white;
+    border: 1px solid white;
+    border-radius: 30px;
+    margin-right: 10px;
+    
 }
 .landing-page__content {
     min-width: 100%;
@@ -139,3 +149,65 @@ ul a {
 
 }
 
+/* here starts concept section */
+.concept {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.concept__item {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 50px;
+    visibility: hidden;
+    z-index: 0; 
+    opacity: 0;
+    position: absolute;
+    transition: opacity 1s ease-in, visibility 0s 1s;
+}
+.concept__item.active {
+    z-index: 1;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1s ease-in, visibility 0s 0s;
+}
+.concept__item img {
+    width: 60%;
+    height: auto;
+}
+.container {
+    text-align: center;
+    padding: 1.5em;
+}
+.container h3 {
+    font-size: 2rem; 
+    margin-bottom: 15px;
+}
+.container p {
+    font-size: 1.2em;
+}
+/* 
+section location starts here */
+.locations {
+    width: 100%; 
+    height: 70vh;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+}
+.location img {
+    width: 50%;
+    height: auto;
+}
+.locations_list {
+    padding: 10px;
+}
+.locations_list li {
+    text-decoration: none;
+    color: black;
+    margin: 30px;
+}

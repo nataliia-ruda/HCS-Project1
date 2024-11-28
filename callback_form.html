@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/form.css">
+    <title>Callback Form</title>
+  </head>
+  <body>
+    <div class="container">
+        <fieldset>
+          
+        <legend>
+          <span><img src="images/logo.png" alt="logo"></span>
+          </legend>
+          
+         <div class="container__input">
+         <input type="text" id="name" placeholder="Your name" required>
+          <label for="name">Name</label>
+          </div>
+
+          <div class="container__input">
+            <input type="text" id="number" placeholder="Your number" required>
+              <label for="number">Subject</label>
+            </div>
+          
+          <div class="container__input">
+          <input type="email" id="email" placeholder="Email" required>
+             <label for="email">Email</label>
+          </div>
+          
+          <div class="container__input">
+          <input type="date" id="date" required>
+            <label for="date">Choose date:</label>
+          </div>
+          
+          <div class="container__input">
+          <textarea id="question" placeholder="Please, type your message or topic of a conversation (optional)" cols="5" rows="7"></textarea>
+            <label for="question">Message</label>
+          </div>
+         
+         <button type="submit">Submit</button>
+         
+               </fieldset>
+            </form>
+        </div>
+    <script src="js/form.js"></script>
+  </body>
+</html>
