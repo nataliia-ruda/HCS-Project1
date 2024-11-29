@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
     <title>Document</title>
   </head>
   <body>
@@ -16,7 +22,7 @@
           <li><a href="">Treatment</a></li>
           <li><a href="">Contact</a></li>
           <li><a href="">Locations</a></li>
-          <li><a href="callback_form.html" class="btn__call">Order Callback</a></li>
+          <li><a href="callback_form.html" class="btn__call">Request Callback</a></li>
         </ul>
       </nav>
 
@@ -89,11 +95,11 @@
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
             ipsum, distinctio harum nemo sapiente mollitia atque voluptatem
             earum corporis odit reprehenderit rerum at obcaecati accusantium
-            quibusdam eveniet facere? Nesciunt, enim.
+            quibusdam eveniet facere? Nesciunt, enim. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio omnis ipsam sequi provident nisi deleniti magnam adipisci pariatur? Molestiae, consequuntur ratione. Obcaecati culpa fugit quibusdam dolorem consequatur veniam aliquam quod?
           </p>
         </div>
 
-        <img src="images/reception-2.jpg" alt="" />
+        <img src="images/reception.jpg" alt="girl talking with recetionist" />
       </div>
 
       <div class="concept__item">
@@ -103,11 +109,11 @@
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
             ipsum, distinctio harum nemo sapiente mollitia atque voluptatem
             earum corporis odit reprehenderit rerum at obcaecati accusantium
-            quibusdam eveniet facere? Nesciunt, enim.
+            quibusdam eveniet facere? Nesciunt, enim. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas autem explicabo impedit ipsa dolores laborum reiciendis omnis, sunt dignissimos, quisquam dolorum eos iure repellat, ab quos consequatur magnam asperiores itaque?
           </p>
         </div>
 
-        <img src="images/consulatation.jpg" alt="" />
+        <img src="images/consultation.jpg" alt="two doctors talking with couple" />
       </div>
 
       <div class="concept__item">
@@ -117,12 +123,58 @@
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
             ipsum, distinctio harum nemo sapiente mollitia atque voluptatem
             earum corporis odit reprehenderit rerum at obcaecati accusantium
-            quibusdam eveniet facere? Nesciunt, enim.
+            quibusdam eveniet facere? Nesciunt, enim. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati debitis aperiam blanditiis culpa dolorem eos quas impedit molestiae consectetur saepe, at enim officia error sed facere esse iure, amet eum!
           </p>
         </div>
 
-        <img src="images/screening.jpg" alt="" />
+        <img src="images/screening.jpg" alt=" pregnant woman having ultra-sound" />
       </div>
+    </section>
+
+    <section class="service-packages">
+        <table>
+          <thead>
+            <tr>
+              <th colspan="3"><h3>Service Packages</h3></th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Confidence Package</td>
+              <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda incidunt impedit numquam recusandae itaque a pariatur culpa, tempore sit quis nemo adipisci ullam laboriosam, veniam molestias, porro blanditiis eligendi. Enim?</td>
+              <td>322</td>
+            </tr>
+
+            <tr>
+              <td>Check-Up Package</td>
+              <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas provident, odit omnis cum at distinctio corporis quia fuga hic temporibus. Neque excepturi sequi minima tenetur quaerat architecto labore, ea fugit?</td>
+              <td>539</td>
+            </tr>
+
+            <tr>
+              <td>Pragnancy Planning</td>
+              <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi numquam accusantium ducimus aliquam libero soluta id, reprehenderit, architecto temporibus, similique eaque modi! Quidem omnis voluptas amet repellendus labore dolorum officia.</td>
+              <td>567</td>
+            </tr>
+
+            <tr>
+              <td>Parental Care "Comfort"</td>
+              <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus fugiat quam deserunt amet aliquam repudiandae corporis placeat recusandae, adipisci impedit vitae et, facilis, error dignissimos quibusdam. Nulla quo ut eum?</td>
+              <td>2340</td>
+            </tr>
+
+            <tr>
+              <td>Delivery Programs</td>
+              <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis temporibus officiis unde animi vero iure quisquam provident a placeat fugiat, itaque sit facere saepe repellat, corrupti, voluptates deserunt et at.</td>
+              <td>from 5500</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="service-packages__download">
+            <button>Download Price</button>
+        </div>
     </section>
 
        <section class="locations">
@@ -135,8 +187,12 @@
                 <hr>
                 <li><a href="">Harmony Clinic, Bern</a></li>
              </ol>
-       </section>
 
+             <div id="map">
+
+             </div>
+       </section>
+        
     <script src="js/index.js"></script>
   </body>
 </html>

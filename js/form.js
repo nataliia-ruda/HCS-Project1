@@ -24,4 +24,6 @@ fBtn.addEventListener("click", function (){
     fEmail.value = ''; 
     fDate.value = formattedDate; 
     fMessage.value = ''; 
+
+    alert ("Thank you! Your callback request was successfully submited.")
 })
