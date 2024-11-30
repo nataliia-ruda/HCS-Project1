@@ -195,17 +195,69 @@ ul a {
 section service packeges starts here */
 .service-packages {
     width: 100%;
-   
-    background-color:  #d5d8c9;
+    font-size: 1.3em;
+   /*  background-color:  #d5d8c9; */
+}
+table {
+    padding: 20px 40px;
 }
 table h3 {
     font-size: 2rem;
     text-align: center;
     padding: 1em;
 }
+ /* table tr {
+    height: 15vh;
+
+ } */
+  tr,td {
+    border: 2px solid black;
+    padding: 0.8em;
+  }
+ table tr:nth-child(odd) {
+    width: 30%;
+   
+ }
+ .service-packages__download{
+    display: flex;
+    justify-content: center;
+ }
+ .service-packages__download button {
+    border: none;
+    border-radius: 30px;
+    padding: 30px 40px;
+    font-size: 1em;
+    background-color: var(--main-bg);
+    color: white;
+    margin-bottom: 1em;
+ }
+
+
+ /* section locations starts here */
+.locations {
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+.locations__list {
+    width: 50%;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+.locations__list ol{
+    line-height: 1.5;
+}
+
+.locations__list a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.5em;
+    padding: 15px;
+}
 
 
 #map { 
-    width: 100%;
+    width: 50%;
     height: 40vh; 
 }
