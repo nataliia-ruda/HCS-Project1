@@ -204,3 +204,8 @@ table h3 {
     padding: 1em;
 }
 
+
+#map { 
+    width: 100%;
+    height: 40vh; 
+}
