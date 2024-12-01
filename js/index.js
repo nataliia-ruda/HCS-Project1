@@ -28,6 +28,13 @@ var marker = L.marker([51.5072, 0.1276]).addTo(map); //London
 var marker = L.marker([50.8229, 0.1363]).addTo(map); //Brighton 
 var marker = L.marker([51.9244, 4.4777]).addTo(map); //Rotterdam 
 
+//feedback-form starts here 
+const allStars = document.querySelectorAll(".star"); 
+
+allStars.forEach((star, i) => {
+    
+})
+
 
 
 
