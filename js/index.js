@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
 }); 
 
 // map starts here 
-var map = L.map('map').setView([51.2085, 3.2251], 7);
+var map = L.map('map').setView([51.591555, 2.250720], 7);
 // Style URL format in XYZ PNG format; see our documentation for more options
 L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png', {
   maxZoom: 20,
