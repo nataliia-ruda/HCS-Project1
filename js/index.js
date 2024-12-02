@@ -17,7 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // map starts here 
 var map = L.map('map').setView([51.591555, 2.250720], 7);
-// Style URL format in XYZ PNG format; see our documentation for more options
 L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png', {
   maxZoom: 20,
   attribution: '&copy; <a href="https://stadiamaps.com/" target="_blank">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>',
