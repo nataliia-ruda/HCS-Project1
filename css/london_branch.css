@@ -25,29 +25,41 @@ nav {
 ul {
     list-style-type: none;
     display: flex;
-    /* gap: 20px;  */
 }
 ul a {
-    text-decoration: none;
-    display: inline-block;
-    padding: 12px 20px; 
-    font-size: 1.3rem;
-    font-family: system-ui;
-    color: black;
+  text-decoration: none;
+  display: inline-block;
+  padding: 12px 20px;
+  font-size: 1.3rem;
+  font-family: system-ui;
+  color: black;
+  position: relative;
 }
-ul a:hover {
+nav ul li a.btn__underline::before {
+  height: 5px;
+  content: "";
+  position: absolute;
+  background-color: var(--main-bg);
+  border-radius: 10px;
+  width: 0%;
+  bottom: 0px;
+  transition: 300ms; 
+}
+nav ul li a.btn__underline:hover::before {
+  width: 70%;
+} 
+.btn__call {
   background-color: #1C448E;
   color: white;
   border-radius: 30px;
-  box-shadow: 2px 2px 2px white; 
+  margin-right: 10px;
+  margin-left: 10px;
 }
-.btn__call {
-    background-color: #1C448E;
-    color: white;
-    border-radius: 30px;
-    margin-right: 10px;
-    margin-left: 10px;
-    
+.btn__call:hover {
+  background: transparent;
+  color: black;
+  border: 2px solid var(--main-bg);
+  box-shadow: 2px 2px 4px var(--main-bg);
 }
 
 /* section header starts here */
@@ -57,7 +69,6 @@ ul a:hover {
     display: flex;
     justify-content: space-around;
     padding: 2em 0;
-  /*   border: 1px solid black; */
 }
 .header h1 {
     font-size: 3em;
