@@ -286,12 +286,35 @@ tbody tr {
 .locations__list ol{
     line-height: 1.5;
 }
+ 
 .locations__list a{
     text-decoration: none;
     color: black;
     font-size: 1.5em;
     padding: 15px;
+    position: relative;
+    font-weight: 400;
+    transition: color 300ms, transform 300ms, font-weight 300ms linear;
 }
+.locations a:hover { 
+    font-weight: 600;
+    color: var(--main-bg); 
+    transform: scale(1.05);
+}
+.locations__list a::before {
+    content: '';
+    height: 0;
+    width: 3px;
+    background-color: var(--main-bg);
+    position: absolute;
+    left: 0;
+    transition: 300ms; 
+}
+.locations__list a:hover::before {
+    height: 1.5em;
+}
+
+
 #map { 
     width: 50%;
     height: 40vh;
