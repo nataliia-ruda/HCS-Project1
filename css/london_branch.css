@@ -35,12 +35,18 @@ ul a {
     font-family: system-ui;
     color: black;
 }
+ul a:hover {
+  background-color: #1C448E;
+  color: white;
+  border-radius: 30px;
+  box-shadow: 2px 2px 2px white; 
+}
 .btn__call {
     background-color: #1C448E;
     color: white;
-   /*  border: 1px solid white; */
     border-radius: 30px;
     margin-right: 10px;
+    margin-left: 10px;
     
 }
 
