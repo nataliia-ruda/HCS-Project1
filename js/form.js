@@ -17,13 +17,20 @@ fBtn.addEventListener("click", function (){
         date: fDate.value,
         message: fMessage.value
     }
+    if (fName.value === '' || fNumber.value === '' || fEmail.value ===''){
+       alert("You need to fill up mandatory fields to submit form!")
+    } else if (isNaN(Number(formInfo.number))){
+        alert("Phone number is inavid"); 
+    } else if (!fEmail.value.includes ("@")){
+        alert("Email format is invalid!"); 
+    }else {
     console.log(formInfo);
-
+    alert ("Thank you! Your callback request was successfully submited.")
     fName.value = ''; 
     fNumber.value = ''; 
     fEmail.value = ''; 
     fDate.value = formattedDate; 
     fMessage.value = ''; 
-
-    alert ("Thank you! Your callback request was successfully submited.")
+    }
+        
 })
