@@ -5,9 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function showNextImage() {
     conceptItems[currentIndex].classList.remove("active");
-    
     currentIndex = (currentIndex + 1) % conceptItems.length;
-
     conceptItems[currentIndex].classList.add("active");
   }
 
@@ -29,10 +27,52 @@ var marker = L.marker([51.9244, 4.4777]).addTo(map); //Rotterdam
 
 //feedback-form starts here 
 const allStars = document.querySelectorAll(".star"); 
+const footerFormBtn = document.querySelector(".btn-submit-feedback"); 
+const footerFormName = document.querySelector(".feedback-name"); 
+const footerFormMessage = document.querySelector(".feedback-message"); 
+let currentStarLevel = 0; 
+
+const modalBtn = document.querySelector(".footer__modal-btn"); 
+const modalBox = document.querySelector(".footer__modal"); 
 
 allStars.forEach((star, i) => {
-    
-})
+    star.addEventListener ("click", function(){
+      currentStarLevel = i+1; 
+
+     allStars.forEach((star,j) =>{
+      if(currentStarLevel >= j+1){
+        star.innerHTML= "&#9733"; 
+      } else {
+        star.innerHTML="&#9734";
+      }
+     })
+    })
+  })
+
+  footerFormBtn.addEventListener("click", function(event){
+    event.preventDefault();
+    let formInfo = {
+      name: footerFormName.value.trim(), 
+      star: currentStarLevel,
+      message: footerFormMessage.value.trim()
+    }
+    console.log(formInfo); 
+    modalBox.style.display="flex";
+    footerFormName.value = ''; 
+    allStars.forEach((star) => {
+      star.innerHTML = "&#9734";
+     });
+
+    currentStarLevel = 0;
+    footerFormMessage.value = ''; 
+
+  })
+
+  modalBtn.addEventListener("click", function(){
+    modalBox.style.display = "none"; 
+  })
+
+
 
 
 
