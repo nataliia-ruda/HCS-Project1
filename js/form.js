@@ -4,6 +4,10 @@ let fEmail = document.querySelector("#email");
 let fDate = document.querySelector("#date"); 
 let fMessage = document.querySelector("#question"); 
 let fBtn = document.querySelector("#btn-submit"); 
+const elModal = document.querySelector(".modal"); 
+const modalBtn = document.querySelector(".modal__btn"); 
+const iconModal = document.querySelector(".modal__icon"); 
+const txtModal = document.querySelector(".modal__text"); 
 
 let currentDate = new Date();
 let formattedDate = currentDate.toISOString().split('T')[0];
@@ -20,12 +24,21 @@ fBtn.addEventListener("click", function (){
     if (fName.value === '' || fNumber.value === '' || fEmail.value ===''){
        alert("You need to fill up mandatory fields to submit form!")
     } else if (isNaN(Number(formInfo.number))){
-        alert("Phone number is inavid"); 
+        iconModal.innerHTML=`<i style="color: red;" class="bi bi-exclamation-circle"></i>`; 
+        txtModal.textContent="Phone number is inavid";
+        elModal.style.display="flex";  
+
+
     } else if (!fEmail.value.includes ("@")){
-        alert("Email format is invalid!"); 
+        iconModal.innerHTML=`<i style="color: red;" class="bi bi-exclamation-circle"></i>`; 
+        txtModal.textContent="Email format is inavid";
+        elModal.style.display="flex";  
+
     }else {
     console.log(formInfo);
-    alert ("Thank you! Your callback request was successfully submited.")
+    elModal.style.display="flex"; 
+ 
+    
     fName.value = ''; 
     fNumber.value = ''; 
     fEmail.value = ''; 
@@ -33,4 +46,8 @@ fBtn.addEventListener("click", function (){
     fMessage.value = ''; 
     }
         
+})
+
+modalBtn.addEventListener("click", function(){
+    elModal.style.display="none"; 
 })
