@@ -108,18 +108,4 @@ fieldset {
   align-items: center;
   background-color: white;
 }
-.modal__box__content{
-  display: flex;
-  justify-content: center; 
-  gap: 1.7em;
-}
-.modal__box i{
-  display: inline-block;
-  color: green;
-  font-size: 2.5em;
-}
-.modal__box button {
-  width: 15%;
-  padding: 5px;
-  border: 1px solid var(--blue);
-}
+
